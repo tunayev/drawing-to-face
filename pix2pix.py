@@ -2,7 +2,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import tensorflow as tf
+import tensorflow._api.v2.compat.v1 as tf
 import numpy as np
 import argparse
 import os
@@ -12,7 +12,7 @@ import random
 import collections
 import math
 import time
-
+tf.disable_v2_behavior()
 parser = argparse.ArgumentParser()
 parser.add_argument("--input_dir", help="path to folder containing images")
 parser.add_argument("--mode", required=True, choices=["train", "test", "export"])
@@ -332,11 +332,11 @@ def create_generator(generator_inputs, generator_outputs_channels):
         layers.append(output)
 
     layer_specs = [
-        a.ngf * 2, # encoder_2: [batch, 128, 128, ngf] => [batch, 64, 64, ngf * 2]
-        a.ngf * 4, # encoder_5: [batch, 16, 16, ngf * 8] => [batch, 8, 8, ngf * 8]
-        a.ngf * 8, # encoder_6: [batch, 8, 8, ngf * 8] => [batch, 4, 4, ngf * 8]
-        a.ngf * 8, # encoder_7: [batch, 4, 4, ngf * 8] => [batch, 2, 2, ngf * 8]
-        a.ngf * 8, # encoder_8: [batch, 2, 2, ngf * 8] => [batch, 1, 1, ngf * 8]
+        a.ngf * 2, # encoder_2: [batch, 32, 32, ngf * 4] => [batch, 16, 16, ngf * 8]
+        a.ngf * 4, # encoder_3: [batch, 16, 16, ngf * 8] => [batch, 8, 8, ngf * 8]
+        a.ngf * 8, # encoder_4: [batch, 8, 8, ngf * 8] => [batch, 4, 4, ngf * 8]
+        a.ngf * 8, # encoder_5: [batch, 4, 4, ngf * 8] => [batch, 2, 2, ngf * 8]
+        a.ngf * 8, # encoder_6: [batch, 2, 2, ngf * 8] => [batch, 1, 1, ngf * 8]
     ]
 
     for out_channels in layer_specs:
@@ -348,13 +348,11 @@ def create_generator(generator_inputs, generator_outputs_channels):
             layers.append(output)
 
     layer_specs = [
-        (a.ngf * 8, 0.5),   # decoder_8: [batch, 1, 1, ngf * 8] => [batch, 2, 2, ngf * 8 * 2]
-        (a.ngf * 8, 0.5),   # decoder_7: [batch, 2, 2, ngf * 8 * 2] => [batch, 4, 4, ngf * 8 * 2]
-        (a.ngf * 8, 0.5),   # decoder_6: [batch, 4, 4, ngf * 8 * 2] => [batch, 8, 8, ngf * 8 * 2]
-        (a.ngf * 8, 0.0),   # decoder_5: [batch, 8, 8, ngf * 8 * 2] => [batch, 16, 16, ngf * 8 * 2]
-        (a.ngf * 4, 0.0),   # decoder_4: [batch, 16, 16, ngf * 8 * 2] => [batch, 32, 32, ngf * 4 * 2]
-        (a.ngf * 2, 0.0),   # decoder_3: [batch, 32, 32, ngf * 4 * 2] => [batch, 64, 64, ngf * 2 * 2]
-        (a.ngf, 0.0),       # decoder_2: [batch, 64, 64, ngf * 2 * 2] => [batch, 128, 128, ngf * 2]
+        (a.ngf * 8, 0.5),   # decoder_6: [batch, 1, 1, ngf * 8] => [batch, 2, 2, ngf * 8 * 2]
+        (a.ngf * 8, 0.5),   # decoder_5: [batch, 2, 2, ngf * 8 * 2] => [batch, 4, 4, ngf * 8 * 2]
+        (a.ngf * 8, 0.5),   # decoder_4: [batch, 4, 4, ngf * 8 * 2] => [batch, 8, 8, ngf * 8 * 2]
+        (a.ngf * 4, 0.0),   # decoder_3: [batch, 8, 8, ngf * 8 * 2] => [batch, 16, 16, ngf * 8 * 2]
+        (a.ngf * 2, 0.0),   # decoder_2: [batch, 16, 16, ngf * 8 * 2] => [batch, 32, 32, ngf * 4 * 2]
     ]
 
     num_encoder_layers = len(layers)
