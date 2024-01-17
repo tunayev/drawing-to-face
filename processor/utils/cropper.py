@@ -7,6 +7,9 @@ class Cropper:
         self.image_path = image_path
 
     def crop(self, width, height, top_offset=None, left_offset=None):
+        # cast to int
+        width = int(width)
+        height = int(height)
         img_width, img_height = self.image.size
 
         if top_offset is None:
@@ -22,6 +25,9 @@ class Cropper:
         return cropped_image
 
     def resize(self, image, width, height):
+        # cast to int
+        width = int(width)
+        height = int(height)
         resized_image = image.resize((width, height))
         return resized_image
 

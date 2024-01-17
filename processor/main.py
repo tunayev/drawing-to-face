@@ -36,11 +36,6 @@ parser.add_argument("--left_offset", required=False, help="offset from left")
 
 args = parser.parse_args()
 output_dir, input_dir, cropped_width, cropped_height, desired_width, desired_height, top_offset, left_offset, input_dir_a, input_dir_b = args.output_dir, args.input_dir, args.cropped_width, args.cropped_height, args.desired_width, args.desired_height, args.top_offset, args.left_offset, args.input_dir_a, args.input_dir_b
-#cast to int
-cropped_width = int(cropped_width)
-cropped_height = int(cropped_height)
-desired_width = int(desired_width)
-desired_height = int(desired_height)
 if args.mode == "crop":
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
