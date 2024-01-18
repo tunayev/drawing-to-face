@@ -7,7 +7,7 @@ node {
       list {
         shape {
           dim {
-            size: 4
+            size: 5
           }
         }
       }
@@ -26,13 +26,14 @@ node {
         dtype: DT_STRING
         tensor_shape {
           dim {
-            size: 4
+            size: 5
           }
         }
         string_val: "images/combined/val\\f1-001-01.jpg"
         string_val: "images/combined/val\\f1-002-01.jpg"
         string_val: "images/combined/val\\m1-001-01.jpg"
         string_val: "images/combined/val\\m1-002-01.jpg"
+        string_val: "images/combined/val\\test.jpg"
       }
     }
   }
@@ -62,7 +63,7 @@ node {
         dtype: DT_INT32
         tensor_shape {
         }
-        int_val: 4
+        int_val: 5
       }
     }
   }
@@ -215,7 +216,7 @@ node {
       list {
         shape {
           dim {
-            size: 4
+            size: 5
           }
         }
       }
@@ -2981,13 +2982,13 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
     key: "seed2"
     value {
-      i: 783944868
+      i: 543549361
     }
   }
 }
@@ -3297,13 +3298,13 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
     key: "seed2"
     value {
-      i: 783944868
+      i: 543549361
     }
   }
 }
@@ -3922,7 +3923,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -4858,7 +4859,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -5562,7 +5563,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -7124,7 +7125,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -7828,7 +7829,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -9390,7 +9391,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -10094,7 +10095,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -11656,7 +11657,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -12360,7 +12361,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -13922,7 +13923,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -14626,7 +14627,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -16188,7 +16189,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -16892,7 +16893,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -18263,7 +18264,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -19466,7 +19467,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -20776,7 +20777,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -21202,7 +21203,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -22405,7 +22406,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -23715,7 +23716,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -24141,7 +24142,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -25344,7 +25345,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -26654,7 +26655,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -27080,7 +27081,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -28283,7 +28284,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -29730,7 +29731,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -30933,7 +30934,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -32380,7 +32381,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -33583,7 +33584,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -35030,7 +35031,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -36431,7 +36432,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -37448,7 +37449,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -38152,7 +38153,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -39795,7 +39796,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -40499,7 +40500,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -42142,7 +42143,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -42846,7 +42847,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
@@ -44489,7 +44490,7 @@ node {
   attr {
     key: "seed"
     value {
-      i: 247042846
+      i: 69091550
     }
   }
   attr {
